@@ -1,9 +1,30 @@
 $(document).ready(function () {
 
-    //移至content
+    //內部聯結
     $("#mouse").click(function () {
         $("html, body").animate({
             scrollTop: $("#content").offset().top
+        }, { duration: 800, easing: "swing" });
+        return false;
+    });
+
+    $("#aboutme-href").click(function () {
+        $("html, body").animate({
+            scrollTop: $("#aboutme").offset().top
+        }, { duration: 800, easing: "swing" });
+        return false;
+    });
+
+    $("#skills-href").click(function () {
+        $("html, body").animate({
+            scrollTop: $("#skills").offset().top
+        }, { duration: 800, easing: "swing" });
+        return false;
+    });
+
+    $("#portfolio-href").click(function () {
+        $("html, body").animate({
+            scrollTop: $("#portfolio").offset().top
         }, { duration: 800, easing: "swing" });
         return false;
     });

@@ -236,31 +236,50 @@ input[type=checkbox]:checked + div {
 .content{
     height: 3000px;
     background-color: #b0d8dc;
+    font-family: Microsoft JhengHei;
 }
 
 .backgroud{
     background-image: url("../img/background_01.png");
 }
 
-.aboutme{
+.aboutme-title{
     margin: 0 auto;
-    padding: 10% 10%;
+    padding: 10% 10% 5%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.aboutme .photo{
+.aboutme-title .photo{
     width: 200px;
     height: 200px;
     border-radius: 50%;
+    background-image: url('../img/IMG_0868.JPG') contain center 0;
     background-color: #fff;
     margin-right: 50px;
 }
 
 .about-info p{
-    font-family: Microsoft JhengHei;
     font-size: 28px;
     color: #fff;
     line-height: 36px;
 }
+
+.myself{
+    padding: 0 20% 10%;
+    font-size: 18px;
+    line-height: 30px;
+    color: #333;
+}
+
+.myself p:nth-child(1){
+    font-weight: 700;
+    padding-left: 30px;
+    border-left: 2px solid #333;
+}
+
+.myself p:nth-child(5){
+    text-indent: 36px;
+}
+
