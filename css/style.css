@@ -77,7 +77,7 @@ input[type="checkbox"]{
 
 /* header */
 header{
-    min-height: 100vh;
+    height: 100vh;
     background: url("../img/index-background.jpg") fixed center;
     
 }
@@ -100,6 +100,7 @@ header{
     padding: 200px 30px;
     background-color:rgba(255, 255, 255, 0.7);
     transition : all 0.5s;
+    z-index: 1;
 }
 
 input[type=checkbox]:checked + div {
