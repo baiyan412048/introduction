@@ -1,0 +1,247 @@
+/*css rest start*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+/*css rest end*/
+
+body{
+    background-color: #b0d8dc;
+}
+
+input[type="checkbox"]{
+    display: none;
+}
+
+.to-top{
+    position: fixed;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.3;
+    z-index: 1;
+    font-size: 1.6rem;
+    line-height: 3rem;
+    text-align: center;
+    color: #333;
+    cursor: pointer;
+}
+
+/* header */
+header{
+    min-height: 1000px;
+    background: url("../img/index-background.jpg") no-repeat fixed center;
+    
+}
+
+.logo{
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 16rem;
+    height: 16rem;
+    background-image: url("../img/LOGO.svg");
+}
+
+.menu{
+    display: block;
+    position: fixed;
+    right: 0;
+    height: 100%;
+    padding: 200px 30px;
+    background-color:rgba(255, 255, 255, 0.7);
+    transition : all 0.5s;
+}
+
+input[type=checkbox]:checked + div {
+    transform: translateX(100%);
+    transition : all 0.5s;
+}
+
+.menu li a{
+    font-size: 1.2rem;
+    line-height: 4rem;
+    letter-spacing : .25rem;
+    font-family: Microsoft JhengHei;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+}
+
+
+.menu-icon{
+    position: fixed;
+    right: 1.5rem;
+    top: 1.5rem;
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-icon span{
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+    transition: all ease 0.15s;
+}
+
+.menu-icon:hover span{
+    transform: scale(1.2,1.2);
+}
+
+.menu-icon span:nth-child(2){
+    position: absolute;
+    top:20px;
+}
+
+.menu-icon span:nth-child(3){
+    position: absolute;
+    top:10px;
+}
+
+.active:hover{
+    transform: scale(1.2,1.2);
+}
+
+.active span:nth-child(1){
+    background-color: #333;
+    opacity: 0;
+}
+
+.active span:nth-child(2){
+    background-color: #333;
+    transform: rotate(45deg);
+    top:10px;
+}
+
+.active span:nth-child(3){
+    background-color: #333;
+    transform: rotate(-45deg);
+}
+
+.middle{
+    position: absolute;
+    top: 92%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.mouse{
+    width: 25px;
+    height: 50px;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    transition : all 0.3s;
+}
+
+.mouse:hover{
+    border: 2px solid #fff;
+    border-radius: 50px;
+    background-color:rgba(255, 255, 255, 0.2);
+}
+
+.middle::before{
+    content: "";
+    width: 3px;
+    height: 10px;
+    position: absolute;
+    top: 20%;
+    background: #fff;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 100%;
+    opacity: 1;
+    animation: mouse 1.5s infinite;
+}
+
+@keyframes mouse {
+    from{
+    opacity: 1;
+    top: 20%;
+    }
+    to{
+    opacity: 0;
+    top: 60%;
+    }
+}
+
+/*content*/
+
+.content{
+    width: 100%;
+    height: 3000px;
+    background-image: url("../img/background_01.png");
+}
+
+.aboutme{
+    margin: 0 auto;
+    padding: 10% 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutme .photo{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin-right: 50px;
+}
+
+.about-info p{
+    font-family: Microsoft JhengHei;
+    font-size: 28px;
+    color: #fff;
+    line-height: 36px;
+}
