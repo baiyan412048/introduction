@@ -77,8 +77,8 @@ input[type="checkbox"]{
 
 /* header */
 header{
-    min-height: 1000px;
-    background: url("../img/index-background.jpg") no-repeat fixed center;
+    min-height: 100vh;
+    background: url("../img/index-background.jpg") fixed center;
     
 }
 
