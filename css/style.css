@@ -1,59 +1,146 @@
 /*css rest start*/
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 
-img{
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+img {
     max-width: 100%;
     height: auto;
 }
 
 /*css rest end*/
-input[type="checkbox"]{
+input[type="checkbox"] {
     display: none;
 }
 
-.to-top{
+.to-top {
     position: fixed;
     right: 1.5rem;
     bottom: 1.5rem;
@@ -62,7 +149,7 @@ input[type="checkbox"]{
     border-radius: 50%;
     background-color: #fff;
     opacity: 0.3;
-    z-index: 1;
+    z-index: 10;
     font-size: 1.6rem;
     line-height: 3rem;
     text-align: center;
@@ -71,15 +158,16 @@ input[type="checkbox"]{
 }
 
 /* header */
-header{
+header {
     height: 100vh;
     background: url("../img/index-background.jpg") no-repeat fixed center;
 }
 
 @media (max-width:768px) {
-    header{
+    header {
         background: none;
     }
+
     header::before {
         content: "";
         display: block;
@@ -97,36 +185,37 @@ header{
     }
 }
 
-.logo{
+.logo {
     position: absolute;
     top: 48%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     width: 16rem;
     height: 16rem;
     background-image: url("../img/LOGO.svg");
 }
 
-.menu{
+.menu {
     display: block;
     position: fixed;
     right: 0;
-    height: 100%;
+    top: 0;
+    bottom: 0;
     padding: 200px 30px;
-    background-color:rgba(255, 255, 255, 0.7);
-    transition : all 0.5s;
+    background-color: rgba(255, 255, 255, 0.7);
+    transition: all 0.5s;
     z-index: 1;
 }
 
-input[type=checkbox]:checked + div {
+input[type=checkbox]:checked+div {
     transform: translateX(100%);
-    transition : all 0.5s;
+    transition: all 0.5s;
 }
 
-.menu li a{
+.menu li a {
     font-size: 1.2rem;
     line-height: 4rem;
-    letter-spacing : .25rem;
+    letter-spacing: .25rem;
     font-family: Microsoft JhengHei;
     font-weight: bold;
     color: #333;
@@ -134,7 +223,7 @@ input[type=checkbox]:checked + div {
 }
 
 
-.menu-icon{
+.menu-icon {
     position: fixed;
     right: 1.5rem;
     top: 1.5rem;
@@ -144,7 +233,7 @@ input[type=checkbox]:checked + div {
     z-index: 2;
 }
 
-.menu-icon span{
+.menu-icon span {
     display: block;
     width: 30px;
     height: 2px;
@@ -152,61 +241,62 @@ input[type=checkbox]:checked + div {
     transition: all ease 0.15s;
 }
 
-.menu-icon:hover span{
-    transform: scale(1.2,1.2);
+.menu-icon:hover span {
+    transform: scale(1.2, 1.2);
 }
 
-.menu-icon span:nth-child(2){
+.menu-icon span:nth-child(2) {
     position: absolute;
-    top:20px;
+    top: 20px;
 }
 
-.menu-icon span:nth-child(3){
+.menu-icon span:nth-child(3) {
     position: absolute;
-    top:10px;
+    top: 10px;
 }
 
-.active:hover{
-    transform: scale(1.2,1.2);
+.active:hover {
+    transform: scale(1.2, 1.2);
 }
 
-.active span:nth-child(1){
+.active span:nth-child(1) {
     background-color: #333;
     opacity: 0;
 }
 
-.active span:nth-child(2){
+.active span:nth-child(2) {
     background-color: #333;
     transform: rotate(45deg);
-    top:10px;
+    top: 10px;
 }
 
-.active span:nth-child(3){
+.active span:nth-child(3) {
     background-color: #333;
     transform: rotate(-45deg);
 }
 
-.middle{
+.middle {
     position: absolute;
     top: 92%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
-.mouse{
+
+.mouse {
     width: 25px;
     height: 50px;
     border: 2px solid #fff;
     border-radius: 50px;
-    transition : all 0.3s;
+    transition: all 0.3s;
 }
 
-.mouse:hover{
+.mouse:hover {
     border: 2px solid #fff;
     border-radius: 50px;
-    background-color:rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
-.middle::before{
+.middle::before {
     content: "";
     width: 3px;
     height: 10px;
@@ -221,29 +311,30 @@ input[type=checkbox]:checked + div {
 }
 
 @keyframes mouse {
-    from{
-    opacity: 1;
-    top: 20%;
+    from {
+        opacity: 1;
+        top: 20%;
     }
-    to{
-    opacity: 0;
-    top: 60%;
+
+    to {
+        opacity: 0;
+        top: 60%;
     }
 }
 
 /*content*/
 
-.content{
+.content {
     height: 3000px;
     background-color: #b0d8dc;
     font-family: Microsoft JhengHei;
 }
 
-.backgroud{
+.backgroud {
     background-image: url("../img/background_01.png");
 }
 
-.aboutme-title{
+.aboutme-title {
     margin: 0 auto;
     padding: 10% 10% 5%;
     display: flex;
@@ -251,35 +342,41 @@ input[type=checkbox]:checked + div {
     align-items: center;
 }
 
-.aboutme-title .photo{
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background-image: url('../img/IMG_0868.JPG') contain center 0;
-    background-color: #fff;
+.aboutme-title .photo {
+    width: 300px;
+    height: 300px;
+    background: url('../img/IMG_0868.JPG') center center;
+    background-size: cover;
     margin-right: 50px;
+    -webkit-clip-path: circle(50.0% at 50% 50%);
+    clip-path: circle(50.0% at 50% 50%);
 }
 
-.about-info p{
+@media (max-width:768px) {
+    .aboutme-title .photo {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+.about-info p {
     font-size: 28px;
-    color: #fff;
     line-height: 36px;
 }
 
-.myself{
+.myself {
     padding: 0 20% 10%;
     font-size: 18px;
     line-height: 30px;
     color: #333;
 }
 
-.myself p:nth-child(1){
+.myself p:nth-child(1) {
     font-weight: 700;
     padding-left: 30px;
     border-left: 2px solid #333;
 }
 
-.myself p:nth-child(5){
+.myself p:nth-child(5) {
     text-indent: 36px;
 }
-
